@@ -1,4 +1,49 @@
-h1
+header
 {
-    color: blue;
+	height: 125px
+}
+
+div
+{
+    color: #F36E1F;
+	height: 30px;
+	width: 100%;
+	border: 0;
+	background-color: #F36E1F;
+}
+
+section
+{
+	font-family:sans-serif;
+}
+
+#header_logo
+{
+	width:10%;
+}
+
+#header_title
+{
+	width:80%;
+}
+
+header h1
+{
+	vertical-align: middle;
+	font-family:sans-serif;
+	font-size:50px;
+	color: #2E78A5;
+}
+
+#header_p_logo
+{
+	width:10%;
+}
+
+footer
+{
+	vertical-align: middle;
+	font-family:sans-serif;
+    background-color: #8CC640;
+	height: 30px;
 }
