@@ -20,5 +20,5 @@
 	//Disconnect from database
 	DisconnectFromDatabase($db);
 	
-	// header('Location: index.php');
+	header('Location: index.php');
 ?>
