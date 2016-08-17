@@ -1,10 +1,10 @@
 <?php
 	include("DataBaseConnection.php");
 	
-	$name = "titi";
-	$restaurant_id = 1;
-	$seats = 4;
-	$time = "12:00:00";
+	$name = $_POST['name'];
+	$restaurant_id = (int)$_POST['restaurants'];
+	$seats = (int)$_POST['seats'];
+	$time = $_POST['time'];
 	
 	//Connect to database
 	$db = ConnectToDataBase();
@@ -20,5 +20,5 @@
 	//Disconnect from database
 	DisconnectFromDatabase($db);
 	
-	header('Location: index.php');
+	// header('Location: index.php');
 ?>

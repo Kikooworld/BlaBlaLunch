@@ -12,48 +12,40 @@
 			<img src="img/100_BlaBlaLunch_logo.png" alt="BlaBlaLunch Logo" />
 		</a>
 		<h1>Suggest a BlaBla Lunch</h1>
-		<table border="0" cellspacing="10" cellpadding="0">
-			<tbody>
-				<tr valign="top">
-					<td>Nom :</td>
-					<td><input type="text" name="name" style="width:100%"><br></td>
-				</tr>
-				<tr valign="top">
-					<td>Restaurant :</td>
-					<td> 
-						<select name="restaurants" style="width:100%">
-							<option value="geant">1</option>
-							<option value="cube">2</option>
-							<option value="geantGalery">3</option>
-							<option value="bakery">4</option>
-							<option value="another">Autre ...</option>
-						</select>
-					</td>
-				</tr>
-				<tr valign="top">
-					<td>Heure de départ :</td>
-					<td><input name="time" type="text" pattern="([01]?[0-9]|2[0-3])(([:][0-5][0-9])|([h]([0-5][0-9]){0,1}))" style="width:100%"></td>
-				</tr>
-				<tr valign="top">
-					<td>Nombre de place(s) disponible(s) :</td>
-					<td><input name="seats" type="number" min="1" max="8" style="width:100%"><br></td>
-				</tr>
-				<tr valign="top">
-					<td/>
-					<td>
-						<form action="index.php" method="post">
-							<p>
-								<input type="reset" value="Annuler" style="float: right;">
-							</p>
-						</form>
-						<form action="CarsTableOperations.php" method="post">
-							<p>
-								<input type="submit" value="Soumettre" style="float: right;">
-							</p>
-						</form>
-					</td>
-				</tr>
-			</tbody>
-		</table>
+		<form action="CarsTableOperations.php" method="post">
+			<table border="0" cellspacing="10" cellpadding="0">
+				<tbody>
+					<tr valign="top">
+						<td>Nom :</td>
+						<td><input type="text" name="name" style="width:100%"><br></td>
+					</tr>
+					<tr valign="top">
+						<td>Restaurant :</td>
+						<td> 
+							<select name="restaurants" style="width:100%">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="another">Autre ...</option>
+							</select>
+						</td>
+					</tr>
+					<tr valign="top">
+						<td>Heure de départ :</td>
+						<td><input name="time" type="text" pattern="([01]?[0-9]|2[0-3])(([:][0-5][0-9])|([h]([0-5][0-9]){0,1}))(([:][0-5][0-9])|([h]([0-5][0-9]){0,1}))" style="width:100%"></td>
+					</tr>
+					<tr valign="top">
+						<td>Nombre de place(s) disponible(s) :</td>
+						<td><input name="seats" type="number" min="1" max="8" style="width:100%"><br></td>
+					</tr>
+					<tr valign="top">
+						<td>
+							<input type="submit" value="Soumettre" style="float: right;">
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</form>
 	</body>
 </html>
