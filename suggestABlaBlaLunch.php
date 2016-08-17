@@ -41,13 +41,16 @@
 				<tr valign="top">
 					<td/>
 					<td>
-						<input type="reset" value="Annuler" style="float: right;">
+						<form action="index.php" method="post">
+							<p>
+								<input type="reset" value="Annuler" style="float: right;">
+							</p>
+						</form>
 						<form action="CarsTableOperations.php" method="post">
 							<p>
 								<input type="submit" value="Soumettre" style="float: right;">
 							</p>
 						</form>
-						<!--input type="submit" value="Soumettre" style="float: right;" onClick="SaveCar(\'' + name.value + '\', \'' + restaurants.selectedIndex + '\', \'' + seats.value + '\', \'' + time.value + '\')"-->
 					</td>
 				</tr>
 			</tbody>
