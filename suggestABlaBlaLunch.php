@@ -35,6 +35,9 @@
 									GetRestaurants();
 								?>
 							</td>
+							<td> 
+								<a class="link_button" href="add_a_restaurant.php">Ajouter un restaurant</a>
+							</td>
 						</tr>
 						<tr>
 							<td>Heure de départ :</td>
