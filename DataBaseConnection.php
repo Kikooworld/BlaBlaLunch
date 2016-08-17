@@ -3,11 +3,7 @@
 	function ConnectToDataBase()
 	{	
 		// on se connecte à MySQL
-		if ($db = mysqli_connect('localhost', 'root', '', 'blablalunch'))
-		{
-			echo 'Connection success';
-		}
-		else
+		if (!($db = mysqli_connect('localhost', 'root', '', 'blablalunch')))
 		{
 			echo 'Connection error';
 		}
@@ -17,11 +13,7 @@
 	function DisconnectFromDatabase($db)
 	{
 		// on ferme la connexion à mysql
-		if (mysqli_close($db))
-		{
-			echo 'Disconnection success';
-		}
-		else
+		if (!(mysqli_close($db)))
 		{
 			echo 'Disconnection error';
 		}

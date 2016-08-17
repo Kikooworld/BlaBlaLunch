@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <html>
 	<head>
 		<!-- En-tête de la page -->
@@ -30,13 +31,10 @@
 						<tr>
 							<td>Restaurant :</td>
 							<td> 
-								<select name="restaurants">
-									<option value="1">1</option>
-									<option value="2">2</option>
-									<option value="3">3</option>
-									<option value="4">4</option>
-									<option value="another">Autre ...</option>
-								</select>
+								<?php
+									include('GetRestaurants.php');
+									GetRestaurants();
+								?>
 							</td>
 						</tr>
 						<tr>
