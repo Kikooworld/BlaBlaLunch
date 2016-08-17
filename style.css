@@ -33,6 +33,7 @@ header h1
 	font-family: 'Open Sans', sans-serif;
 	font-size:50px;
 	color: #2E78A5;
+	text-align: center;
 }
 
 #header_p_logo
@@ -63,6 +64,13 @@ input[type=submit]:focus {
 
 textarea {
    resize: none;
+}
+
+.form_table{
+	border: none;
+	border-spacing: 10px;
+    border-collapse: separate;
+	padding: 10px;
 }
 
 footer

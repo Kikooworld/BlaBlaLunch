@@ -1,51 +1,65 @@
+<!DOCTYPE html>
 <html>
 	<head>
 		<!-- En-tête de la page -->
-		<meta charset="utf-8" />
-		<link rel="icon" href="img/favicon.ico" />
-		<link rel="stylesheet" href="style.css" />
-		<title>Blabla Lunch test</title>
+		<?php include('head.html'); ?>
+		<title>BlablaLunch - Suggérer un BlaBlaLunch</title>
 	</head>
 	<body>
+		<header>
+			<!-- En-tête de la page -->
+			<?php include('header.html'); ?>
+		</header>
+		<section>
+			<div id="header_hr"/>
+		</section>
+
 		<!-- Corps de la page -->		
-		<a href="index.html" title="Cliquer ici pour retourner à la page d'accueil">
-			<img src="img/100_BlaBlaLunch_logo.png" alt="BlaBlaLunch Logo" />
-		</a>
-		<h1>Suggest a BlaBla Lunch</h1>
-		<form action="CarsTableOperations.php" method="post">
-			<table border="0" cellspacing="10" cellpadding="0">
-				<tbody>
-					<tr valign="top">
-						<td>Nom :</td>
-						<td><input type="text" name="name" style="width:100%"><br></td>
-					</tr>
-					<tr valign="top">
-						<td>Restaurant :</td>
-						<td> 
-							<select name="restaurants" style="width:100%">
-								<option value="1">1</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-								<option value="4">4</option>
-								<option value="another">Autre ...</option>
-							</select>
-						</td>
-					</tr>
-					<tr valign="top">
-						<td>Heure de départ :</td>
-						<td><input name="time" type="text" pattern="([01]?[0-9]|2[0-3])(([:][0-5][0-9])|([h]([0-5][0-9]){0,1}))(([:][0-5][0-9])|([h]([0-5][0-9]){0,1}))" style="width:100%"></td>
-					</tr>
-					<tr valign="top">
-						<td>Nombre de place(s) disponible(s) :</td>
-						<td><input name="seats" type="number" min="1" max="8" style="width:100%"><br></td>
-					</tr>
-					<tr valign="top">
-						<td>
-							<input type="submit" value="Soumettre" style="float: right;">
-						</td>
-					</tr>
-				</tbody>
-			</table>
+		<section>
+			<h1>Suggérer un BlaBlaLunch</h1>
+
+			<form action="CarsTableOperations.php" method="post">
+				<table class="form_table">
+					<tbody>
+						<tr>
+							<td>Nom :</td>
+							<td>
+								<input type="text" name="name" />
+							</td>
+						</tr>
+						<tr>
+							<td>Restaurant :</td>
+							<td> 
+								<select name="restaurants">
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="another">Autre ...</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td>Heure de départ :</td>
+							<td>
+								<input name="time" type="text" pattern="([01]?[0-9]|2[0-3])(([:][0-5][0-9])|([h]([0-5][0-9]){0,1}))(([:][0-5][0-9])|([h]([0-5][0-9]){0,1}))" placeholder = "12:00:00"/>
+							</td>
+						</tr>
+						<tr>
+							<td>Nombre de place(s) disponible(s) :</td>
+							<td>
+								<input type="number" name="seats" min="1" max="8" />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<input type="submit" value="Soumettre" />
+								<a class="link_button" href="index.php">Cancel</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
 			</form>
+		</section>
 	</body>
 </html>
