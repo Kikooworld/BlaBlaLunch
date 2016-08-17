@@ -73,6 +73,15 @@ textarea {
 	padding: 10px;
 }
 
+.form_textarea{
+	width:300px;
+	height:100px;
+}
+
+.form_text{
+	width:302px;
+}
+
 footer
 {
 	vertical-align: middle;
