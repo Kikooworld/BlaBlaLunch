@@ -4,25 +4,31 @@
 		<!-- En-tête de la page -->
 		<meta charset="utf-8" />
 		<link rel="icon" href="img/favicon.ico" />
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
 		<link rel="stylesheet" href="style.css" />
 		<title>Blabla Lunch test</title>
 	</head>
 
 	<body>
 		<header>
-			<!-- Placez ici le contenu de l'en-tête de votre page -->
+			<!-- En-tête de la page -->
 			<?php include('header.html'); ?>
 		</header>
 
+		<!-- Corps de la page -->
 		<section>
 			<div id="header_hr"/>
 		</section>
 
 		<section>
-			<!-- Corps de la page -->		
-			<p>This is a section</p>
+			<p>Welcome on BlaBlaLunch!</p>
 		</section>
 
+		<section>	
+			<a class="link_button" href="suggestABlaBlaLunch.php" title="Cliquer ici pour suggérer un BlaBlaLunch">Suggest a BlaBlaLunch</a>
+		</section>
+
+		<!-- Pied de page -->
 		<footer>
 			<?php include('footer.html'); ?>
 		</footer>
