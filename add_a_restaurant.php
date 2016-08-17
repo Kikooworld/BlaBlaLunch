@@ -35,7 +35,7 @@
 						<tr>
 							<td>
 								<input type="submit" value="Ajouter"/>
-								<a class="link_button" href="index.php">Annuler</a>
+								<a class="link_button" href="suggestABlaBlaLunch.php">Annuler</a>
 							</td>
 						</tr>
 					</tbody>
