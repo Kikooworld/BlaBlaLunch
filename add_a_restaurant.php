@@ -20,12 +20,33 @@
 			<div id="header_hr"/>
 		</section>
 
-		<section>
-			<h1>Bienvenue sur BlaBlaLunch !</h1>
-		</section>
 
-		<section>	
-			<a class="link_button" href="suggestABlaBlaLunch.php" title="Cliquer ici pour suggérer un BlaBlaLunch">Suggérer un BlaBlaLunch</a>
+		<section>
+			<h1>Ajouter un restaurant</h1>
+			<table border="0" cellspacing="10" cellpadding="0">
+				<tbody>
+					<tr valign="top">
+						<td>Nom :</td>
+						<td>
+							<input type="text" name="name" style="width:302px" />
+						</td>
+					</tr>
+					<tr valign="top">
+						<td>Adresse :</td>
+						<td>
+							<textarea name="textarea" style="width:300px;height:100px;"></textarea>
+						</td>
+					</tr>
+					<tr valign="top">
+						<td/>
+						<td>
+							<input type="submit" value="Add"/>
+							<a class="link_button" href="index.php">Cancel</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
 		</section>
 
 		<!-- Pied de page -->
