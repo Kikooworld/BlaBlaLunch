@@ -58,5 +58,10 @@
 				</table>
 			</form>
 		</section>
+		
+		<!-- Pied de page -->
+		<footer>
+			<?php include('footer.html'); ?>
+		</footer>
 	</body>
 </html>
