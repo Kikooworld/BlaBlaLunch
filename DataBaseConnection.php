@@ -3,7 +3,7 @@
 	function ConnectToDataBase()
 	{	
 		// on se connecte à MySQL
-		if ($db = mysqli_connect('localhost', 'root', ''))
+		if ($db = mysqli_connect('localhost', 'root', '', 'blablalunch'))
 		{
 			echo 'Connection success';
 		}
