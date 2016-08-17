@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Mar 16 Août 2016 à 12:33
+-- Généré le :  Mar 16 Août 2016 à 17:07
 -- Version du serveur :  5.7.11
 -- Version de PHP :  5.6.19
 
@@ -28,6 +28,7 @@ USE `blablalunch`;
 -- Structure de la table `cars`
 --
 
+DROP TABLE IF EXISTS `cars`;
 CREATE TABLE `cars` (
   `owner` varchar(100) NOT NULL,
   `time` time NOT NULL,
@@ -48,6 +49,7 @@ CREATE TABLE `cars` (
 -- Structure de la table `participants`
 --
 
+DROP TABLE IF EXISTS `participants`;
 CREATE TABLE `participants` (
   `name` varchar(100) NOT NULL,
   `id` int(11) NOT NULL
@@ -63,6 +65,7 @@ CREATE TABLE `participants` (
 -- Structure de la table `participations`
 --
 
+DROP TABLE IF EXISTS `participations`;
 CREATE TABLE `participations` (
   `participant_id` int(11) NOT NULL,
   `car_id` int(11) NOT NULL,
@@ -84,6 +87,7 @@ CREATE TABLE `participations` (
 -- Structure de la table `restaurants`
 --
 
+DROP TABLE IF EXISTS `restaurants`;
 CREATE TABLE `restaurants` (
   `name` varchar(100) NOT NULL,
   `address` varchar(1000) DEFAULT NULL,
@@ -133,6 +137,30 @@ ALTER TABLE `restaurants`
   ADD PRIMARY KEY (`id`);
 
 --
+-- AUTO_INCREMENT pour les tables exportées
+--
+
+--
+-- AUTO_INCREMENT pour la table `cars`
+--
+ALTER TABLE `cars`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT pour la table `participants`
+--
+ALTER TABLE `participants`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT pour la table `participations`
+--
+ALTER TABLE `participations`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT pour la table `restaurants`
+--
+ALTER TABLE `restaurants`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
 -- Contraintes pour les tables exportées
 --
 
@@ -140,14 +168,14 @@ ALTER TABLE `restaurants`
 -- Contraintes pour la table `cars`
 --
 ALTER TABLE `cars`
-  ADD CONSTRAINT `car_with_restaurant` FOREIGN KEY (`restaurant_id`) REFERENCES `restaurants` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `restaurant_id` FOREIGN KEY (`restaurant_id`) REFERENCES `restaurants` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Contraintes pour la table `participations`
 --
 ALTER TABLE `participations`
-  ADD CONSTRAINT `participation_with_car` FOREIGN KEY (`car_id`) REFERENCES `cars` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `participation_with_participant` FOREIGN KEY (`participant_id`) REFERENCES `participants` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `car_id` FOREIGN KEY (`car_id`) REFERENCES `cars` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `participant_id` FOREIGN KEY (`participant_id`) REFERENCES `participants` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

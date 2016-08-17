@@ -21,11 +21,11 @@
 				<tr valign="top">
 					<td>Restaurant :</td>
 					<td> 
-						<select style="width:100%">
-							<option value="geant">Géant</option>
-							<option value="cube">Cube</option>
-							<option value="geantGalery">Galerie marchande de Géant</option>
-							<option value="bakery">Boulangerie</option>
+						<select name="restaurants" style="width:100%">
+							<option value="geant">1</option>
+							<option value="cube">2</option>
+							<option value="geantGalery">3</option>
+							<option value="bakery">4</option>
 							<option value="another">Autre ...</option>
 						</select>
 					</td>
@@ -41,8 +41,13 @@
 				<tr valign="top">
 					<td/>
 					<td>
-						<input type="submit" value="Annuler" style="float: right;">
-						<input type="submit" value="Soumettre" style="float: right;">
+						<input type="reset" value="Annuler" style="float: right;">
+						<form action="CarsTableOperations.php" method="post">
+							<p>
+								<input type="submit" value="Soumettre" style="float: right;">
+							</p>
+						</form>
+						<!--input type="submit" value="Soumettre" style="float: right;" onClick="SaveCar(\'' + name.value + '\', \'' + restaurants.selectedIndex + '\', \'' + seats.value + '\', \'' + time.value + '\')"-->
 					</td>
 				</tr>
 			</tbody>
