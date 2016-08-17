@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <html>
 	<head>
 		<!-- En-tête de la page -->
