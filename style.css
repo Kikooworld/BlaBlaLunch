@@ -3,23 +3,13 @@ header
 	height: 125px
 }
 
-div
-{
-    color: #F36E1F;
-	height: 30px;
-	width: 100%;
-	border: 0;
-	background-color: #F36E1F;
-}
-
-section
-{
-	font-family: 'Open Sans', sans-serif;
-}
-
 #header_logo
 {
 	width:10%;
+}
+
+#header_table{
+	width: 100%;
 }
 
 #header_title
@@ -41,9 +31,18 @@ header h1
 	width:10%;
 }
 
-#input_suggest
+div
 {
+    color: #F36E1F;
+	height: 30px;
+	width: 100%;
+	border: 0;
+	background-color: #F36E1F;
+}
 
+section
+{
+	font-family: 'Open Sans', sans-serif;
 }
 
 input[type=submit], .link_button {
@@ -59,6 +58,8 @@ input[type=submit], .link_button {
 	display: inline-block;
 }
 
+
+
 input[type=submit]:focus {
 }
 
@@ -73,7 +74,33 @@ textarea {
 	padding: 10px;
 }
 
+.lunch_table th, .lunch_table td
+{
+	text-align: left;
+	padding: 10px;
+	border-bottom: 1px solid #ddd;
+}
+
+.lunch_table th
+{
+	background-color: #2E78A5;
+    color: white;
+}
+
+.lunch_table tr:hover 
+{
+	background-color: #A6CEE6
+}
+
+.lunch_table{
+	border-collapse:collapse;
+	width:100%;
+	max-width:1024px;
+	min-width:600px;
+}
+
 .form_textarea{
+	font-family: 'Open Sans', sans-serif;
 	width:300px;
 	height:100px;
 }
@@ -84,10 +111,15 @@ textarea {
 
 footer
 {
+	position:fixed;
+	left:0px;
+	bottom:0px;
+	width:100%;
 	vertical-align: middle;
 	font-family: 'Open Sans', sans-serif;
-    background-color: #8CC640;
-	height: 30px;
+    background-color: #F36E1F;
+	height: 20px;
 	text-align: center;
 	color: white;
+	padding: 10px;
 }

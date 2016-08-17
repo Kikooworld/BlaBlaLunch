@@ -14,13 +14,44 @@
 		<section>
 			<div id="header_hr"/>
 		</section>
-		
+
 		<!-- Corps de la page -->
 		<section>
 			<h1>Bienvenue sur BlaBlaLunch !</h1>
-	
+
 			<a class="link_button" href="suggestABlaBlaLunch.php" title="Cliquer ici pour suggérer un BlaBlaLunch">Suggérer un BlaBlaLunch</a>
 			<a class="link_button" href="add_a_restaurant.php" title="Cliquer ici pour ajouter un restaurant">Ajouter un restaurant</a>
+		</section>
+		<br/>
+		<section>
+			<table class="lunch_table">
+				<tr>
+					<thead>
+						<th>Nom</th>
+						<th>Restaurant</th>
+						<th>Places disponibles</th>
+						<th></th>
+					</thead>
+				</tr>
+				<tr>
+					<td>Contenu 1</td>
+					<td>Contenu 2</td>
+					<td>Contenu 3</td>
+					<td><input type="submit" value="Réserver une place" /></td>
+				</tr>
+				<tr>
+					<td>Contenu 1</td>
+					<td>Contenu 2</td>
+					<td>Contenu 3</td>
+					<td><input type="submit" value="Réserver une place" /></td>
+				</tr>
+				<tr>
+					<td>Contenu 1</td>
+					<td>Contenu 2</td>
+					<td>Contenu 3</td>
+					<td><input type="submit" value="Réserver une place" /></td>
+				</tr>
+			</table>
 		</section>
 
 		<!-- Pied de page -->
