@@ -28,30 +28,17 @@
 			<table class="lunch_table">
 				<tr>
 					<thead>
-						<th>Nom</th>
 						<th>Restaurant</th>
+						<th>Heure de départ</th>
+						<th>Conducteur</th>
 						<th>Places disponibles</th>
-						<th></th>
+						<th/>
 					</thead>
 				</tr>
-				<tr>
-					<td>Contenu 1</td>
-					<td>Contenu 2</td>
-					<td>Contenu 3</td>
-					<td><input type="submit" value="Réserver une place" /></td>
-				</tr>
-				<tr>
-					<td>Contenu 1</td>
-					<td>Contenu 2</td>
-					<td>Contenu 3</td>
-					<td><input type="submit" value="Réserver une place" /></td>
-				</tr>
-				<tr>
-					<td>Contenu 1</td>
-					<td>Contenu 2</td>
-					<td>Contenu 3</td>
-					<td><input type="submit" value="Réserver une place" /></td>
-				</tr>
+				<?php
+					include('command/get_cars.php');
+					GetCars();
+				?>
 			</table>
 		</section>
 
