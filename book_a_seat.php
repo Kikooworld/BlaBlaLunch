@@ -21,15 +21,17 @@
 			<table class="lunch_table">
 				<tr>
 					<thead>
-						<th>Nom</th>
 						<th>Restaurant</th>
+						<th>Heure de départ</th>
+						<th>Conducteur</th>
 						<th>Places disponibles</th>
 					</thead>
 				</tr>
 				<tr>
-					<td>Contenu 1</td>
-					<td>Contenu 2</td>
-					<td>Contenu 3</td>
+					<?php 
+						include('command/get_car.php');
+						GetCar($_POST['carId']);
+					?>
 				</tr>
 			</table>
 			<br/>
