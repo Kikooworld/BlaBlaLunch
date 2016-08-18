@@ -20,7 +20,6 @@
 			<h1>Bienvenue sur BlaBlaLunch !</h1>
 
 			<a class="link_button" href="suggest_a_blablalunch.php" title="Cliquer ici pour suggérer un BlaBlaLunch">Suggérer un BlaBlaLunch</a>
-			<a class="link_button" href="add_a_restaurant.php" title="Cliquer ici pour ajouter un restaurant">Ajouter un restaurant</a>
 			<a class="link_button" href="book_a_seat.php" title="Cliquer ici pour ajouter un restaurant">Réserver une place</a>
 		</section>
 		<br/>
