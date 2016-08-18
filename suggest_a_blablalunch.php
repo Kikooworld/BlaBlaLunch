@@ -24,7 +24,7 @@
 						<tr>
 							<td>Nom :</td>
 							<td>
-								<input type="text" name="name" />
+								<input type="text" name="name" required = "required" />
 							</td>
 						</tr>
 						<tr>
@@ -42,13 +42,13 @@
 						<tr>
 							<td>Heure de départ :</td>
 							<td>
-								<input name="time" type="text" pattern="([01]?[0-9]|2[0-3])(([:][0-5][0-9])|([h]([0-5][0-9]){0,1}))(([:][0-5][0-9])|([h]([0-5][0-9]){0,1}))" placeholder = "12:00:00"/>
+								<input name="time" type="time" min="11:00" max="14:00" required = "required" />
 							</td>
 						</tr>
 						<tr>
 							<td>Nombre de place(s) disponible(s) :</td>
 							<td>
-								<input type="number" name="seats" min="1" max="8" />
+								<input type="number" name="seats" min="1" max="6" required = "required" />
 							</td>
 						</tr>
 						<tr>
