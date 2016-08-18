@@ -23,22 +23,15 @@
 			<a class="link_button" href="book_a_seat.php" title="Cliquer ici pour ajouter un restaurant">Réserver une place</a>
 		</section>
 		<br/>
-		<section>
-			<table class="lunch_table">
-				<tr>
-					<thead>
-						<th>Restaurant</th>
-						<th>Heure de départ</th>
-						<th>Conducteur</th>
-						<th>Places disponibles</th>
-						<th/>
-					</thead>
-				</tr>
-				<?php
-					include('command/get_cars.php');
-					GetCars();
-				?>
-			</table>
+		<section id="table_blablalunchs">
+			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+			<script>
+				function autoRefresh_section()
+				{
+					$("#table_blablalunchs").load("blablalunchs.php");// a function which will load data from other file after x seconds
+				}
+				setInterval('autoRefresh_section()', 5000); // refresh div after 5 secs
+            </script>
 		</section>
 
 		<!-- Pied de page -->
