@@ -2,14 +2,14 @@
 <html>
 	<head>
 		<!-- En-tête de la page -->
-		<?php include('head.html'); ?>
+		<?php include('global/head.html'); ?>
 		<title>BlablaLunch - Réserver une place</title>
 	</head>
 
 	<body>
 		<header>
 			<!-- En-tête de la page -->
-			<?php include('header.html'); ?>
+			<?php include('global/header.html'); ?>
 		</header>
 		<section>
 			<div id="header_hr"/>
@@ -61,7 +61,7 @@
 
 		<!-- Pied de page -->
 		<footer>
-			<?php include('footer.html'); ?>
+			<?php include('global/footer.html'); ?>
 		</footer>
 	</body>
 </html>

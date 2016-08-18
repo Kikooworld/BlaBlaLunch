@@ -1,5 +1,5 @@
 <?php
-	include("DataBaseConnection.php");
+	include("database_connection.php");
 	
 	$name = $_POST['name'];
 	$address = $_POST['address'];
@@ -18,5 +18,5 @@
 	//Disconnect from database
 	DisconnectFromDatabase($db);
 	
-	header('Location: index.php');
+	header('Location: ../index.php');
 ?>

@@ -2,14 +2,14 @@
 <html>
 	<head>
 		<!-- En-tête de la page -->
-		<?php include('head.html'); ?>
+		<?php include('global/head.html'); ?>
 		<title>BlablaLunch - Ajouter un restaurant</title>
 	</head>
 
 	<body>
 		<header>
 			<!-- En-tête de la page -->
-			<?php include('header.html'); ?>
+			<?php include('global/header.html'); ?>
 		</header>
 		<section>
 			<div id="header_hr"/>
@@ -17,7 +17,7 @@
 
 		<section>
 			<h1>Ajouter un restaurant</h1>
-			<form action="RestaurantsTableOperations.php" method="post">
+			<form action="command/insert_a_restaurant.php" method="post">
 				<table border="0" cellspacing="10" cellpadding="0">
 					<tbody>
 						<tr>
@@ -35,7 +35,7 @@
 						<tr>
 							<td>
 								<input type="submit" value="Ajouter"/>
-								<a class="link_button" href="suggestABlaBlaLunch.php">Annuler</a>
+								<a class="link_button" href="suggest_a_blablalunch.php">Annuler</a>
 							</td>
 						</tr>
 					</tbody>
@@ -45,7 +45,7 @@
 
 		<!-- Pied de page -->
 		<footer>
-			<?php include('footer.html'); ?>
+			<?php include('global/footer.html'); ?>
 		</footer>
 	</body>
 </html>

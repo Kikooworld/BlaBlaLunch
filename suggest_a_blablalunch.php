@@ -2,13 +2,13 @@
 <html>
 	<head>
 		<!-- En-tête de la page -->
-		<?php include('head.html'); ?>
+		<?php include('global/head.html'); ?>
 		<title>BlablaLunch - Suggérer un BlaBlaLunch</title>
 	</head>
 	<body>
 		<header>
 			<!-- En-tête de la page -->
-			<?php include('header.html'); ?>
+			<?php include('global/header.html'); ?>
 		</header>
 		<section>
 			<div id="header_hr"/>
@@ -18,7 +18,7 @@
 		<section>
 			<h1>Suggérer un BlaBlaLunch</h1>
 
-			<form action="CarsTableOperations.php" method="post">
+			<form action="command/insert_a_car.php" method="post">
 				<table class="form_table">
 					<tbody>
 						<tr>
@@ -31,7 +31,7 @@
 							<td>Restaurant :</td>
 							<td> 
 								<?php
-									include('GetRestaurants.php');
+									include('command/get_restaurants.php');
 									GetRestaurants();
 								?>
 							</td>
@@ -64,7 +64,7 @@
 		
 		<!-- Pied de page -->
 		<footer>
-			<?php include('footer.html'); ?>
+			<?php include('global/footer.html'); ?>
 		</footer>
 	</body>
 </html>
