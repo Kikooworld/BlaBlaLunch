@@ -41,7 +41,7 @@
 						<tr>
 							<td>Nom :</td>
 							<td>
-								<input type="text" name="name" class="form_text" />
+								<input type="text" name="name" class="form_text" required="required"/>
 							</td>
 						</tr>
 						<tr>
