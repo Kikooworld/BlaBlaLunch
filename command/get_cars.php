@@ -39,13 +39,16 @@
 			
 			$availableSeats = $carSeats - $participationsNb;
 
+			echo "<form action=\"book_a_seat.php\" method=\"post\">";
 			echo "<tr>";
 			echo "<td>".$restaurantName."</td>";
 			echo "<td>".$carTime."</td>";
 			echo "<td>".$carOwner."</td>";
 			echo "<td>".$availableSeats."/".$carSeats."</td>";
-			echo "<td><input type=\"submit\" value=\"Réserver une place\" /></td>";
+			echo "<td><input type=\"hidden\" name=\"carId\" value=\"".$carId."\"></td>";
+			echo "<td><input type=\"submit\" value=\"Réserver une place\"/></td>";
 			echo "</tr>";
+			echo "</form>";
 		}
 		
 		/* Libère le résultat */

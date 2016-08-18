@@ -24,23 +24,21 @@
 		</section>
 		<br/>
 		<section>
-			<form action="book_a_seat.php" method="post">
-				<table class="lunch_table">
-					<tr>
-						<thead>
-							<th>Restaurant</th>
-							<th>Heure de départ</th>
-							<th>Conducteur</th>
-							<th>Places disponibles</th>
-							<th/>
-						</thead>
-					</tr>
-					<?php
-						include('command/get_cars.php');
-						GetCars();
-					?>
-				</table>
-			</form>
+			<table class="lunch_table">
+				<tr>
+					<thead>
+						<th>Restaurant</th>
+						<th>Heure de départ</th>
+						<th>Conducteur</th>
+						<th>Places disponibles</th>
+						<th/>
+					</thead>
+				</tr>
+				<?php
+					include('command/get_cars.php');
+					GetCars();
+				?>
+			</table>
 		</section>
 
 		<!-- Pied de page -->
