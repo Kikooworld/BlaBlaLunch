@@ -21,24 +21,17 @@
 			<a class="link_button" href="suggest_a_blablalunch.php" title="Cliquer ici pour proposer un BlaBlaLunch">Proposer un BlaBlaLunch</a>
 		</section>
 		<br/>
-		<section>
-			<table class="lunch_table">
-				<tr>
-					<thead>
-						<th>Lieu</th>
-						<th>À emporter</th>
-						<th>Heure de départ</th>
-						<th>Conducteur</th>
-						<th>Place(s) disponible(s)</th>
-						<th>Participant(s)</th>
-						<th/>
-					</thead>
-				</tr>
-				<?php
-					include('command/get_cars.php');
-					GetCars();
-				?>
-			</table>
+
+		<section id="table_blablalunchs">
+			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"> </script>
+			<script>
+				function autoRefresh_section()
+				{
+					$("#table_blablalunchs").load("blablalunchs.php");// a function which will load data from other file after x seconds
+				}
+				setInterval('autoRefresh_section()', 3000); // refresh div after 5 secs
+            </script>
+			<?php include('blablalunchs.php'); ?>
 		</section>
 
 		<!-- Pied de page -->
