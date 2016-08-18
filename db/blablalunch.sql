@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Mar 16 Août 2016 à 17:07
+-- Généré le :  Jeu 18 Août 2016 à 15:59
 -- Version du serveur :  5.7.11
 -- Version de PHP :  5.6.19
 
@@ -19,8 +19,6 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `blablalunch`
 --
-CREATE DATABASE IF NOT EXISTS `blablalunch` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `blablalunch`;
 
 -- --------------------------------------------------------
 
@@ -99,13 +97,6 @@ CREATE TABLE `restaurants` (
 --
 
 --
--- Contenu de la table `restaurants`
---
-
-INSERT INTO `restaurants` (`name`, `address`, `id`) VALUES
-('Cube', NULL, 1);
-
---
 -- Index pour les tables exportées
 --
 
@@ -128,7 +119,7 @@ ALTER TABLE `participants`
 ALTER TABLE `participations`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `participant_id` (`participant_id`),
-  ADD UNIQUE KEY `car_id` (`car_id`);
+  ADD KEY `car_id` (`car_id`) USING BTREE;
 
 --
 -- Index pour la table `restaurants`
@@ -144,22 +135,22 @@ ALTER TABLE `restaurants`
 -- AUTO_INCREMENT pour la table `cars`
 --
 ALTER TABLE `cars`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 --
 -- AUTO_INCREMENT pour la table `participants`
 --
 ALTER TABLE `participants`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT pour la table `participations`
 --
 ALTER TABLE `participations`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT pour la table `restaurants`
 --
 ALTER TABLE `restaurants`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 --
 -- Contraintes pour les tables exportées
 --

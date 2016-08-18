@@ -35,7 +35,7 @@
 				</tr>
 			</table>
 			<br/>
-			<form action="ParticipationsTableOperations.php" method="post">
+			<form action="command/insert_a_participant_and_a_participation.php" method="post">
 				<table border="0" cellspacing="10" cellpadding="0">
 					<tbody>
 						<tr>
@@ -52,6 +52,7 @@
 						</tr>
 						<tr>
 							<td>
+								<input type="hidden" name="carId" value="<?php echo $_POST['carId']; ?>"/>
 								<input type="submit" value="Réserver"/>
 								<a class="link_button" href="index.php">Annuler</a>
 							</td>
