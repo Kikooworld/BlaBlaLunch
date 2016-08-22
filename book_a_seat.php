@@ -22,6 +22,7 @@
 				<tr>
 					<thead>
 						<th>Lieu</th>
+						<th>À emporter</th>
 						<th>Heure de départ</th>
 						<th>Conducteur</th>
 						<th>Places disponibles</th>

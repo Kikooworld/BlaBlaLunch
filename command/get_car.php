@@ -8,13 +8,13 @@
 		
 		//Select car's properties
 		$req_pre = mysqli_prepare($db,
-		   "SELECT cars.owner, cars.time, cars.seats, restaurants.id, restaurants.name
+		   "SELECT cars.owner, cars.time, cars.seats, cars.take_away, restaurants.id, restaurants.name
 			FROM cars, restaurants
 			WHERE (cars.id = \"".$carId."\" AND cars.restaurant_id = restaurants.id);") or die(mysqli_error($db));
 		
 		mysqli_set_charset( $db, 'utf8' );
 		mysqli_stmt_execute($req_pre);
-		mysqli_stmt_bind_result($req_pre, $carOwner, $carTime, $carSeats, $restaurantId, $restaurantName);
+		mysqli_stmt_bind_result($req_pre, $carOwner, $carTime, $carSeats, $carTakeaway, $restaurantId, $restaurantName);
 		mysqli_stmt_store_result($req_pre);
 		mysqli_stmt_fetch($req_pre);
 		
@@ -26,9 +26,15 @@
 		mysqli_stmt_fetch($req_pre2);
 		
 		$availableSeats = $carSeats - $participationsNb;
+		$checked = "";
+		if ($carTakeaway == 1)
+		{
+			$checked =  "checked";
+		}
 
 		//Build html
 		echo "<td>".$restaurantName."</td>";
+		echo "<td><input type=\"checkbox\"  disabled ".$checked."></td>";
 		echo "<td>".$carTime."</td>";
 		echo "<td>".$carOwner."</td>";
 		echo "<td>".$availableSeats."/".$carSeats."</td>";
