@@ -18,9 +18,25 @@
 		foreach($rows as &$row)
 		{			
 			$availableSeats = $row['carSeats'];
+			$participants = "";
 			if ($useReservedSeats)
 			{
 				$availableSeats = $row['carSeats'] - $row['participationsCount'];
+				$req_pre = mysqli_prepare($db, "SELECT participants.name FROM participations, participants WHERE participations.car_id = ".$row['carId']." AND participations.participant_id = participants.id;") or die(mysqli_error($db));
+				mysqli_stmt_execute($req_pre);
+				mysqli_stmt_bind_result($req_pre, $participantName);
+				
+				while (mysqli_stmt_fetch($req_pre)) 
+				{
+					if ($participants == "")
+					{
+						$participants .= $participantName;
+					}
+					else
+					{
+						$participants .= "<br>".$participantName;
+					}
+				}
 			}
 			$checked = "";
 			if ($row['carTakeaway'] == 1)
@@ -35,6 +51,7 @@
 			echo "<td>".$row['carTime']."</td>";
 			echo "<td>".$row['carOwner']."</td>";
 			echo "<td>".$availableSeats."/".$row['carSeats']."</td>";
+			echo "<td>".$participants."</td>";
 			echo "<td><input type=\"hidden\" name=\"carId\" value=\"".$row['carId']."\"></td>";
 			echo "<td><input type=\"submit\" value=\"Réserver une place\"/></td>";
 			echo "</tr>";
