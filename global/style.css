@@ -58,7 +58,9 @@ input[type=submit], .link_button {
 	display: inline-block;
 }
 
-
+input[type=submit]:disabled {
+    background-color: #c1f182;
+}
 
 input[type=submit]:focus {
 }

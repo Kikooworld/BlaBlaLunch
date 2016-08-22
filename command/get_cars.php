@@ -44,6 +44,12 @@
 				$checked =  "checked";
 			}
 
+			$disableSubmitButton = "";
+			if ($availableSeats == 0)
+			{
+				$disableSubmitButton = "disabled";
+			}
+			
 			echo "<form action=\"book_a_seat.php\" method=\"post\">";
 			echo "<tr>";
 			echo "<td>".$row['restaurantName']."</td>";
@@ -53,7 +59,7 @@
 			echo "<td>".$availableSeats."/".$row['carSeats']."</td>";
 			echo "<td>".$participants."</td>";
 			echo "<td><input type=\"hidden\" name=\"carId\" value=\"".$row['carId']."\"></td>";
-			echo "<td><input type=\"submit\" value=\"Réserver une place\"/></td>";
+			echo "<td><input type=\"submit\" value=\"Réserver une place\" ".$disableSubmitButton."/></td>";
 			echo "</tr>";
 			echo "</form>";
 		}
