@@ -43,7 +43,7 @@
 						<tr>
 							<td>Nom :</td>
 							<td>
-								<input type="text" name="name" class="form_text" required="required"/>
+								<input type="text" name="name" class="form_text" required="required" value="<?php if(isset($_COOKIE['username'])){echo $_COOKIE['username'];} else {echo "";} ?>"/>
 							</td>
 						</tr>
 						<tr>

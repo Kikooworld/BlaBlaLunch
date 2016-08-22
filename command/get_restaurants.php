@@ -3,6 +3,12 @@
 	{
 		include("command/database_connection.php");
 		
+		$favoriteRestaurantId = 0;
+		if(isset($_COOKIE['restaurant']))
+		{
+			$favoriteRestaurantId =  $_COOKIE['restaurant'];
+		}
+		
 		//Connect to database
 		$db = ConnectToDataBase();
 		
@@ -21,7 +27,12 @@
 		//lire la requete
 		while (mysqli_stmt_fetch($req_pre)) 
 		{
-			echo "<option value=\"".$restaurantId."\">".$restaurantName."</option>";
+			$selected = "";
+			if ($favoriteRestaurantId == $restaurantId)
+			{
+				$selected = " selected=\"selected\"";
+			}
+			echo "<option value=\"".$restaurantId."\"".$selected.">".$restaurantName."</option>";
 		}
 		echo "</select>";
 		

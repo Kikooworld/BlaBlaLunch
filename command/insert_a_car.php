@@ -6,6 +6,13 @@
 	$seats = (int)$_POST['seats'];
 	$time = $_POST['time'];
 	$take_away = 0;
+	
+	setcookie("username", $name, time() + (86400 * 30), '/');
+	setcookie("time", $time, time() + (86400 * 30), '/');
+	setcookie("seats", $seats, time() + (86400 * 30), '/');
+	setcookie("restaurant", $restaurant_id, time() + (86400 * 30), '/');
+	setcookie("takeaway", $take_away, time() + (86400 * 30), '/');
+	
 	if ($_POST['where'] == 'takeaway')
 	{
 		$take_away = 1;
@@ -16,6 +23,7 @@
 	
 	//preparer la requete
 	$req_pre = mysqli_prepare($db, "INSERT INTO `cars` (`owner`, `time`, `seats`, `id`, `restaurant_id`, `take_away`) VALUES (\"" . $name . "\", \"" . $time . "\", \"" . $seats . "\", NULL, \"" . $restaurant_id . "\", \"" . $take_away . "\");") or die(mysqli_error($db));
+	
 	echo "Request prepared";
 	
 	mysqli_set_charset( $db, 'utf8' );

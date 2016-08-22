@@ -10,6 +10,8 @@
 	$name = $_POST['name'];
 	$comment = $_POST['comment'];
 	
+	setcookie("username", $name, time() + (86400 * 30), '/');
+	
 	$req_pre = mysqli_prepare($db, "INSERT INTO `participants` (`name`, `id`) VALUES (\"" . $name . "\", NULL);") or die(mysqli_error($db));
 	mysqli_set_charset( $db, 'utf8' );
 	mysqli_stmt_execute($req_pre);

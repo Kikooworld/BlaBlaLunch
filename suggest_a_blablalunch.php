@@ -24,7 +24,7 @@
 						<tr>
 							<td>Nom :</td>
 							<td>
-								<input type="text" name="name" required = "required" />
+								<input type="text" name="name" required = "required" value="<?php if(isset($_COOKIE['username'])){echo $_COOKIE['username'];} else {echo "";} ?>"/>
 							</td>
 						</tr>
 						<tr>
@@ -49,13 +49,13 @@
 						<tr>
 							<td>Heure de départ :</td>
 							<td>
-								<input name="time" type="time" min="11:00" max="14:00" required = "required" />
+								<input name="time" type="time" min="11:00" max="14:00" required = "required" value="<?php if(isset($_COOKIE['time'])){echo $_COOKIE['time'];} else {echo "";} ?>"/>
 							</td>
 						</tr>
 						<tr>
 							<td>Nombre de place(s) disponible(s) :</td>
 							<td>
-								<input type="number" name="seats" min="1" max="6" required = "required" />
+								<input type="number" name="seats" min="1" max="6" required = "required" value="<?php if(isset($_COOKIE['seats'])){echo $_COOKIE['seats'];} else {echo "";} ?>"/>
 							</td>
 						</tr>
 						<tr>
