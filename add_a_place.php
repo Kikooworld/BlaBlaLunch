@@ -3,7 +3,7 @@
 	<head>
 		<!-- En-tête de la page -->
 		<?php include('global/head.html'); ?>
-		<title>BlablaLunch - Ajouter un restaurant</title>
+		<title>BlablaLunch - Ajouter un lieu</title>
 	</head>
 
 	<body>
@@ -16,7 +16,7 @@
 		</section>
 
 		<section>
-			<h1>Ajouter un restaurant</h1>
+			<h1>Ajouter un lieu</h1>
 			<form action="command/insert_a_restaurant.php" method="post">
 				<table border="0" cellspacing="10" cellpadding="0">
 					<tbody>

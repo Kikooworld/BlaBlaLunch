@@ -25,7 +25,7 @@
 			<table class="lunch_table">
 				<tr>
 					<thead>
-						<th>Restaurant</th>
+						<th>Lieu</th>
 						<th>Heure de départ</th>
 						<th>Conducteur</th>
 						<th>Places disponibles</th>

@@ -28,7 +28,7 @@
 							</td>
 						</tr>
 						<tr>
-							<td>Restaurant :</td>
+							<td>Lieu :</td>
 							<td> 
 								<?php
 									include('command/get_restaurants.php');
@@ -36,7 +36,7 @@
 								?>
 							</td>
 							<td> 
-								<a class="link_button" href="add_a_restaurant.php">Ajouter un restaurant</a>
+								<a class="link_button" href="add_a_place.php">Ajouter un lieu</a>
 							</td>
 						</tr>
 						<tr>
