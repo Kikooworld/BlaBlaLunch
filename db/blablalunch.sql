@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Jeu 18 Août 2016 à 15:59
+-- Généré le :  Lun 22 Août 2016 à 12:12
 -- Version du serveur :  5.7.11
 -- Version de PHP :  5.6.19
 
@@ -32,14 +32,9 @@ CREATE TABLE `cars` (
   `time` time NOT NULL,
   `seats` int(10) NOT NULL,
   `id` int(11) NOT NULL,
-  `restaurant_id` int(11) NOT NULL
+  `restaurant_id` int(11) NOT NULL,
+  `take_away` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- RELATIONS POUR LA TABLE `cars`:
---   `restaurant_id`
---       `restaurants` -> `id`
---
 
 -- --------------------------------------------------------
 
@@ -52,10 +47,6 @@ CREATE TABLE `participants` (
   `name` varchar(100) NOT NULL,
   `id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- RELATIONS POUR LA TABLE `participants`:
---
 
 -- --------------------------------------------------------
 
@@ -71,14 +62,6 @@ CREATE TABLE `participations` (
   `id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- RELATIONS POUR LA TABLE `participations`:
---   `car_id`
---       `cars` -> `id`
---   `participant_id`
---       `participants` -> `id`
---
-
 -- --------------------------------------------------------
 
 --
@@ -91,10 +74,6 @@ CREATE TABLE `restaurants` (
   `address` varchar(1000) DEFAULT NULL,
   `id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- RELATIONS POUR LA TABLE `restaurants`:
---
 
 --
 -- Index pour les tables exportées
@@ -135,22 +114,22 @@ ALTER TABLE `restaurants`
 -- AUTO_INCREMENT pour la table `cars`
 --
 ALTER TABLE `cars`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 --
 -- AUTO_INCREMENT pour la table `participants`
 --
 ALTER TABLE `participants`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 --
 -- AUTO_INCREMENT pour la table `participations`
 --
 ALTER TABLE `participations`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 --
 -- AUTO_INCREMENT pour la table `restaurants`
 --
 ALTER TABLE `restaurants`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- Contraintes pour les tables exportées
 --
