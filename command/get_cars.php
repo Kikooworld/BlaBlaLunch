@@ -8,13 +8,14 @@
 		
 		//Requete pour récupérer les voitures sans passagers
 		$req_pre = mysqli_prepare($db,
-		  "SELECT cars.id, cars.owner, cars.time, cars.seats, cars.id, restaurants.name, COUNT(*)
+		   "SELECT cars.id, cars.owner, cars.time, cars.seats, restaurants.id, restaurants.name, COUNT(*)
 			FROM cars, restaurants
 			WHERE cars.id NOT IN
 			  ( SELECT cars.id
 				FROM cars, restaurants, participations
 				WHERE cars.restaurant_id = restaurants.id AND cars.id = participations.car_id
-				GROUP BY cars.id);") or die(mysqli_error($db));
+				GROUP BY cars.id)
+			GROUP BY cars.id;") or die(mysqli_error($db));
 			
 		mysqli_set_charset( $db, 'utf8' );
 		mysqli_stmt_execute($req_pre);

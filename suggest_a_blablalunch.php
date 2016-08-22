@@ -42,8 +42,8 @@
 						<tr>
 							<td></td>
 							<td>
-								<input type="radio" name="where" value="takeaway" required = "required" checked="true"> À emporter<br></input>
-								<input type="radio" name="where" value="site" required = "required" > Sur place</input>
+								<input type="radio" name="where" value="takeaway" checked="true"> À emporter<br></input>
+								<input type="radio" name="where" value="site" > Sur place</input>
 							</td>
 						</tr>
 						<tr>
