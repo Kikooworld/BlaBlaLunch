@@ -40,6 +40,13 @@
 							</td>
 						</tr>
 						<tr>
+							<td></td>
+							<td>
+								<input type="radio" name="where" value="takeaway" required = "required" checked="true"> À emporter<br></input>
+								<input type="radio" name="where" value="site" required = "required" > Sur place</input>
+							</td>
+						</tr>
+						<tr>
 							<td>Heure de départ :</td>
 							<td>
 								<input name="time" type="time" min="11:00" max="14:00" required = "required" />
