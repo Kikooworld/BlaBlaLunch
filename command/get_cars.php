@@ -44,16 +44,16 @@
 		$db = ConnectToDataBase();
 		
 		//Requete pour récupérer les voitures sans passagers
-		BuildHtml($db, "SELECT cars.id, cars.owner, cars.time, cars.seats, cars.take_away, restaurants.id, restaurants.name, COUNT(*)
+		BuildHtml($db, "SELECT cars.id, cars.owner, cars.time, cars.seats, cars.take_away, cars.restaurant_id, restaurants.name, COUNT(*)
 			FROM cars, restaurants
-			WHERE cars.id NOT IN
+			WHERE cars.restaurant_id = restaurants.id AND cars.id NOT IN
 			  ( SELECT cars.id
 				FROM cars, restaurants, participations
 				WHERE cars.restaurant_id = restaurants.id AND cars.id = participations.car_id
 				GROUP BY cars.id)
 			GROUP BY cars.id;", false);
 		
-		BuildHtml($db, "SELECT cars.id, cars.owner, cars.time, cars.seats, cars.take_away, restaurants.id, restaurants.name, COUNT(*)
+		BuildHtml($db, "SELECT cars.id, cars.owner, cars.time, cars.seats, cars.take_away, cars.restaurant_id, restaurants.name, COUNT(*)
 			FROM cars, restaurants, participations
 			WHERE cars.restaurant_id = restaurants.id AND cars.id = participations.car_id
 			GROUP BY cars.id;", true);
