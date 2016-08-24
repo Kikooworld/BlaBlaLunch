@@ -18,7 +18,7 @@
 		<section>
 			<h1>Proposer un BlaBlaLunch</h1>
 
-			<form action="command/insert_a_car.php" method="post">
+			<form action="command/check_existing_car.php" method="post">
 				<table class="form_table">
 					<tbody>
 						<tr>
