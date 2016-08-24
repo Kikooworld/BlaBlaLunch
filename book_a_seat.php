@@ -47,12 +47,6 @@
 							</td>
 						</tr>
 						<tr>
-							<td>Commentaire :</td>
-							<td>
-								<textarea name="comment" class="form_textarea"> </textarea>
-							</td>
-						</tr>
-						<tr>
 							<td>
 								<input type="hidden" name="carId" value="<?php echo $_POST['carId']; ?>"/>
 								<input type="submit" value="Réserver"/>

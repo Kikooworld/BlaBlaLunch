@@ -9,7 +9,6 @@
 	
 	//Requete insert a participant
 	$name = $_POST['name'];
-	$comment = $_POST['comment'];
 	
 	setcookie("username", utf8_decode($name), time() + (86400 * 30), '/');
 	
@@ -27,6 +26,7 @@
 	//Requete insert a participation
 	$car_id = (int)$_POST['carId'];
 	$req_pre2 = mysqli_prepare($db, "INSERT INTO `participations` (`car_id`, `id`, `comment`, `participant_id`) VALUES (\"" . $car_id . "\", NULL, \"" . $comment . "\", \"" . $participant_id . "\");") or die(mysqli_error($db));
+	$req_pre2 = mysqli_prepare($db, "INSERT INTO `participations` (`car_id`, `id`, `participant_id`) VALUES (\"" . $car_id . "\", NULL, \"" . $participant_id . "\");") or die(mysqli_error($db));
 	mysqli_stmt_execute($req_pre2);	
 	mysqli_stmt_free_result($req_pre);
 	

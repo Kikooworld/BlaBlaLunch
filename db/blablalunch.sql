@@ -58,7 +58,6 @@ DROP TABLE IF EXISTS `participations`;
 CREATE TABLE `participations` (
   `participant_id` int(11) NOT NULL,
   `car_id` int(11) NOT NULL,
-  `comment` varchar(1000) NOT NULL,
   `id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
