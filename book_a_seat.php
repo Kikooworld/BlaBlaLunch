@@ -3,7 +3,6 @@
 	<head>
 		<!-- En-tête de la page -->
 		<?php include('global/head.html'); ?>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<title>BlablaLunch - Réserver une place</title>
 	</head>
 
