@@ -61,8 +61,8 @@
 						</tr>
 						<tr>
 							<td>
-								<input type="submit" value="Soumettre" />
-								<a class="link_button" href="index.php">Cancel</a>
+								<input type="submit" value="Proposer" />
+								<a class="link_button" href="index.php">Annuler</a>
 							</td>
 						</tr>
 					</tbody>

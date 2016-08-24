@@ -7,7 +7,8 @@
 			<th>Conducteur</th>
 			<th>Place(s) disponible(s)</th>
 			<th>Participant(s)</th>
-			<th/>
+			<th> </th>
+			<th> </th>
 		</thead>
 	</tr>
 	<?php
