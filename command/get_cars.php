@@ -1,8 +1,7 @@
 <?php
+	header('content-type: text/html; charset=utf-8');
 	function BuildHtml($db, $request, $useReservedSeats)
-	{
-		mysqli_set_charset( $db, 'utf8' );
-		
+	{		
 		$result = mysqli_query($db, $request);
 		if (!$result)
 		{

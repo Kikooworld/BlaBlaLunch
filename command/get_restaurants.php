@@ -1,4 +1,5 @@
 <?php
+	header('content-type: text/html; charset=utf-8');
 	function GetRestaurants()
 	{
 		include("command/database_connection.php");
@@ -14,8 +15,6 @@
 		
 		//preparer la requete
 		$req_pre = mysqli_prepare($db, "SELECT `id`, `name` FROM `restaurants`;") or die(mysqli_error($db));
-		
-		mysqli_set_charset( $db, 'utf8' );
 		
 		//executer la requete
 		mysqli_stmt_execute($req_pre);

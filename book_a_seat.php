@@ -44,7 +44,7 @@
 						<tr>
 							<td>Nom :</td>
 							<td>
-								<input type="text" name="name" class="form_text" required="required" value="<?php if(isset($_COOKIE['username'])){echo $_COOKIE['username'];} else {echo "";} ?>"/>
+								<input type="text" name="name" class="form_text" required="required" value="<?php if(isset($_COOKIE['username'])){echo utf8_encode($_COOKIE['username']);} else {echo "";} ?>"/>
 							</td>
 						</tr>
 						<tr>

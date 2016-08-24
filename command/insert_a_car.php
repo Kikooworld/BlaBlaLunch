@@ -1,7 +1,8 @@
 <?php
+	header('content-type: text/html; charset=utf-8');
 	include("database_connection.php");
 	
-	$name = $_POST['name'];
+	$name = utf8_decode($_POST['name']);
 	$restaurant_id = (int)$_POST['restaurants'];
 	$seats = (int)$_POST['seats'];
 	$time = $_POST['time'];
@@ -23,14 +24,9 @@
 	
 	//preparer la requete
 	$req_pre = mysqli_prepare($db, "INSERT INTO `cars` (`owner`, `time`, `seats`, `id`, `restaurant_id`, `take_away`) VALUES (\"" . $name . "\", \"" . $time . "\", \"" . $seats . "\", NULL, \"" . $restaurant_id . "\", \"" . $take_away . "\");") or die(mysqli_error($db));
-	
-	echo "Request prepared";
-	
-	mysqli_set_charset( $db, 'utf8' );
 		
 	//executer la requete
 	mysqli_stmt_execute($req_pre);
-	echo "Request executed";
 	
 	//Disconnect from database
 	DisconnectFromDatabase($db);

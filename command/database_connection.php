@@ -7,6 +7,8 @@
 		{
 			echo 'Connection error';
 		}
+		mysqli_set_charset( $db, 'utf8' );
+
 		return $db;
 	}
 	

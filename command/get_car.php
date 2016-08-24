@@ -1,4 +1,5 @@
 <?php
+	header('content-type: text/html; charset=utf-8');
 	function GetCar($carId)
 	{
 		include("command/database_connection.php");
@@ -33,7 +34,6 @@
 			FROM cars, restaurants
 			WHERE (cars.id = \"".$carId."\" AND cars.restaurant_id = restaurants.id);") or die(mysqli_error($db));
 		
-		mysqli_set_charset( $db, 'utf8' );
 		mysqli_stmt_execute($req_pre);
 		mysqli_stmt_bind_result($req_pre, $carOwner, $carTime, $carSeats, $carTakeaway, $restaurantId, $restaurantName);
 		mysqli_stmt_store_result($req_pre);

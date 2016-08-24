@@ -1,8 +1,8 @@
 <?php
 	include("insert_a_place.php");
 	
-	$name = $_POST['name'];
-	$address = $_POST['address'];
+	$name = utf8_decode($_POST['name']);
+	$address = utf8_decode($_POST['address']);
 	
 	//Connect to database
 	$db = ConnectToDataBase();
