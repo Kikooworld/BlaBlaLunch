@@ -3,6 +3,7 @@
 	<head>
 		<!-- En-tête de la page -->
 		<?php include('global/head.html'); ?>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<title>BlablaLunch - Ajouter un lieu</title>
 	</head>
 
@@ -17,7 +18,7 @@
 
 		<section>
 			<h1>Ajouter un lieu</h1>
-			<form action="command/insert_a_restaurant.php" method="post">
+			<form action="command/check_existing_place.php" method="post">
 				<table border="0" cellspacing="10" cellpadding="0">
 					<tbody>
 						<tr>
@@ -29,7 +30,7 @@
 						<tr>
 							<td>Adresse :</td>
 							<td>
-								<textarea name="address" class="form_textarea"> </textarea>
+								<textarea name="address" class="form_textarea"></textarea>
 							</td>
 						</tr>
 						<tr>
