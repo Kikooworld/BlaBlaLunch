@@ -25,27 +25,29 @@
 			<a class="link_button" href="suggest_a_blablalunch.php" title="Cliquer ici pour proposer un BlaBlaLunch">Proposer un BlaBlaLunch</a>
 		</section>
 		<br/>
-
-		<section>
-			<table class="lunch_table">
-				<tr>
-					<thead>
-						<th>Lieu</th>
-						<th>À emporter</th>
-						<th>Heure de départ</th>
-						<th>Conducteur</th>
-						<th>Place(s) disponible(s)</th>
-						<th>Participant(s)</th>
-						<th/>
-					</thead>
-				</tr>
-				<?php
-					include('command/get_cars.php');
-					GetCars();
-				?>
-			</table>
-		</section>
-
+			<div id="wrapper">
+				<section>
+					<div id="scrollable">
+						<table class="lunch_table">
+							<tr>
+								<thead>
+									<th>Lieu</th>
+									<th>À emporter</th>
+									<th>Heure de départ</th>
+									<th>Conducteur</th>
+									<th>Place(s) disponible(s)</th>
+									<th>Participant(s)</th>
+									<th/>
+								</thead>
+							</tr>
+							<?php
+								include('command/get_cars.php');
+								GetCars();
+							?>
+						</table>
+					</div>
+				</section>
+			</div>
 		<!-- Pied de page -->
 		<footer>
 			<?php include('global/footer.html'); ?>
