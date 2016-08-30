@@ -3,7 +3,7 @@
 	<head>
 		<!-- En-tête de la page -->
 		<?php include('global/head.html'); ?>
-		<title>BlablaLunch - Proposer un BlaBlaLunch</title>
+		<title>MiamMiamCar - Proposer un covoiturage</title>
 	</head>
 	<body>
 		<header>
@@ -16,7 +16,7 @@
 
 		<!-- Corps de la page -->		
 		<section>
-			<h1>Proposer un BlaBlaLunch</h1>
+			<h1>Proposer un covoiturage</h1>
 
 			<form action="command/check_existing_car.php" method="post">
 				<table class="form_table">

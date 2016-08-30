@@ -7,7 +7,7 @@
 	<head>
 		<!-- En-tête de la page -->
 		<?php include('global/head.html'); ?>
-		<title>BlablaLunch - Page d'accueil</title>
+		<title>MiamMiamCar - Page d'accueil</title>
 	</head>
 
 	<body>
@@ -21,8 +21,8 @@
 
 		<!-- Corps de la page -->
 		<section>
-			<h1>Bienvenue sur BlaBlaLunch ! Le site de covoiturage pour aller déjeuner !</h1>
-			<a class="link_button" href="suggest_a_blablalunch.php" title="Cliquer ici pour proposer un BlaBlaLunch">Proposer un BlaBlaLunch</a>
+			<h1>Bienvenue sur MiamMiamCar ! Le site de covoiturage pour aller déjeuner !</h1>
+			<a class="link_button" href="suggest_a_blablalunch.php" title="Cliquer ici pour proposer un covoiturage">Proposer un covoiturage</a>
 		</section>
 		<br/>
 			<div id="wrapper">

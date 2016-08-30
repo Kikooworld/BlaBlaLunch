@@ -3,7 +3,7 @@
 	<head>
 		<!-- En-tête de la page -->
 		<?php include('global/head.html'); ?>
-		<title>BlablaLunch - Réserver une place</title>
+		<title>MiamMiamCar - Réserver une place</title>
 	</head>
 
 	<body>
