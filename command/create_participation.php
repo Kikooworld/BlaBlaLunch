@@ -14,7 +14,7 @@
 	$participantId = SelectParticipantId($name);
 	if ($participantId == "")
 	{
-		InsertAParticipant(utf8_decode($name));
+		InsertAParticipant($name);
 		$participantId = SelectParticipantId($name);
 	}
 	

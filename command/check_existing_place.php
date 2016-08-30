@@ -2,11 +2,13 @@
 	header('content-type: text/html; charset=utf-8');
 	include("insert_a_place.php");
 	
-	$name = utf8_decode($_POST['name']);
+	$name = $_POST['name'];
 	$address = utf8_decode($_POST['address']);
 	
 	//Connect to database
 	$db = ConnectToDataBase();
+	
+	echo "<script>alert(\"$name\")</script>";
 	
 	//Check if restaurant already exists
 	$req_pre = mysqli_prepare($db, "SELECT restaurants.id, restaurants.address FROM restaurants WHERE restaurants.name = \"".$name."\";") or die(mysqli_error($db));
