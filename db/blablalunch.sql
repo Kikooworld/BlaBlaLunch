@@ -70,7 +70,6 @@ CREATE TABLE `participations` (
 DROP TABLE IF EXISTS `restaurants`;
 CREATE TABLE `restaurants` (
   `name` varchar(100) NOT NULL,
-  `address` varchar(1000) NOT NULL,
   `id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 

@@ -27,12 +27,6 @@
 							</td>
 						</tr>
 						<tr>
-							<td>Adresse :</td>
-							<td>
-								<textarea name="address" class="form_textarea"></textarea>
-							</td>
-						</tr>
-						<tr>
 							<td>
 								<input type="submit" value="Ajouter"/>
 								<a class="link_button" href="suggest_a_blablalunch.php">Annuler</a>
