@@ -49,6 +49,31 @@
 				</section>
 			</div>
 		<!-- Pied de page -->
+		<marquee behavior="alternate" >
+			<img src="./img/ribbon/banh bao.jpg" width="70" height="60" >
+			<img src="./img/ribbon/bo bun.jpg" width="70" height="60" >
+			<img src="./img/ribbon/burger.jpg" width="70" height="60" >
+			<img src="./img/ribbon/cheese.jpg" width="70" height="60" >
+			<img src="./img/ribbon/crepe.jpg" width="70" height="60" >
+			<img src="./img/ribbon/eclair.jpg" width="70" height="60" >
+			<img src="./img/ribbon/fritures.jpg" width="70" height="60" >
+			<img src="./img/ribbon/glace.jpg" width="70" height="60" >
+			<img src="./img/ribbon/muffin.jpg" width="70" height="60" >
+			<img src="./img/ribbon/nuggets.jpg" width="70" height="60" >
+			<img src="./img/ribbon/panini.jpg" width="70" height="60" >
+			<img src="./img/ribbon/pates sautees.jpg" width="70" height="60" >
+			<img src="./img/ribbon/pates.jpg" width="70" height="60" >
+			<img src="./img/ribbon/pizza.jpg" width="70" height="60" >
+			<img src="./img/ribbon/poisson.jpg" width="70" height="60" >
+			<img src="./img/ribbon/profiterolles.jpg" width="70" height="60" >
+			<img src="./img/ribbon/riz.jpg" width="70" height="60" >
+			<img src="./img/ribbon/salade.jpg" width="70" height="60" >
+			<img src="./img/ribbon/sandwich.jpg" width="70" height="60" >
+			<img src="./img/ribbon/steak.jpg" width="70" height="60" >
+			<img src="./img/ribbon/sushi.jpg" width="70" height="60" >
+			<img src="./img/ribbon/tarte.jpg" width="70" height="60" >
+			<img src="./img/ribbon/wrap.jpg" width="70" height="60" >
+		</marquee>
 		<footer>
 			<?php include('global/footer.html'); ?>
 		</footer>

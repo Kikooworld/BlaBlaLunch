@@ -49,7 +49,7 @@ div#wrapper
 	top:315px;
 	left:0px;
 	right:0px;
-	bottom:40px;
+	bottom:108px;
 }
 
 div#scrollable
@@ -62,6 +62,17 @@ div#scrollable
 	top:0px;
 	bottom:0px;
 	overflow-y:auto;
+}
+
+marquee
+{
+	margin:0px;
+	padding:0px;
+	overflow:hidden;
+	position:absolute;
+	left:0px;
+	right:0px;
+	bottom:40px;
 }
 
 section
