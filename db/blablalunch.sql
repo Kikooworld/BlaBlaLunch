@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Mar 30 Août 2016 à 12:13
+-- Généré le :  Lun 22 Août 2016 à 12:12
 -- Version du serveur :  5.7.11
 -- Version de PHP :  5.6.19
 
@@ -26,6 +26,7 @@ SET time_zone = "+00:00";
 -- Structure de la table `cars`
 --
 
+DROP TABLE IF EXISTS `cars`;
 CREATE TABLE `cars` (
   `owner` varchar(100) NOT NULL,
   `time` time NOT NULL,
@@ -41,6 +42,7 @@ CREATE TABLE `cars` (
 -- Structure de la table `participants`
 --
 
+DROP TABLE IF EXISTS `participants`;
 CREATE TABLE `participants` (
   `name` varchar(100) NOT NULL,
   `id` int(11) NOT NULL
@@ -52,6 +54,7 @@ CREATE TABLE `participants` (
 -- Structure de la table `participations`
 --
 
+DROP TABLE IF EXISTS `participations`;
 CREATE TABLE `participations` (
   `participant_id` int(11) NOT NULL,
   `car_id` int(11) NOT NULL,
@@ -64,11 +67,84 @@ CREATE TABLE `participations` (
 -- Structure de la table `restaurants`
 --
 
+DROP TABLE IF EXISTS `restaurants`;
 CREATE TABLE `restaurants` (
-  `name` varchar(100) CHARACTER SET utf8 NOT NULL,
-  `address` varchar(1000) CHARACTER SET utf8 DEFAULT NULL,
+  `name` varchar(100) NOT NULL,
+  `address` varchar(1000) NOT NULL,
   `id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Index pour les tables exportées
+--
+
+--
+-- Index pour la table `cars`
+--
+ALTER TABLE `cars`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `restaurant_id` (`restaurant_id`);
+
+--
+-- Index pour la table `participants`
+--
+ALTER TABLE `participants`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `participations`
+--
+ALTER TABLE `participations`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `participant_id` (`participant_id`),
+  ADD KEY `car_id` (`car_id`) USING BTREE;
+
+--
+-- Index pour la table `restaurants`
+--
+ALTER TABLE `restaurants`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT pour les tables exportées
+--
+
+--
+-- AUTO_INCREMENT pour la table `cars`
+--
+ALTER TABLE `cars`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=0;
+--
+-- AUTO_INCREMENT pour la table `participants`
+--
+ALTER TABLE `participants`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=0;
+--
+-- AUTO_INCREMENT pour la table `participations`
+--
+ALTER TABLE `participations`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=0;
+--
+-- AUTO_INCREMENT pour la table `restaurants`
+--
+ALTER TABLE `restaurants`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=0;
+--
+-- Contraintes pour les tables exportées
+--
+
+--
+-- Contraintes pour la table `cars`
+--
+ALTER TABLE `cars`
+  ADD CONSTRAINT `restaurant_id` FOREIGN KEY (`restaurant_id`) REFERENCES `restaurants` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Contraintes pour la table `participations`
+--
+ALTER TABLE `participations`
+  ADD CONSTRAINT `car_id` FOREIGN KEY (`car_id`) REFERENCES `cars` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `participant_id` FOREIGN KEY (`participant_id`) REFERENCES `participants` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 DELIMITER $$
 --
