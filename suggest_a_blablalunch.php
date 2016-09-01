@@ -49,7 +49,7 @@
 						<tr>
 							<td>Heure de départ :</td>
 							<td>
-								<input name="time" type="time" min="11:00" max="14:00" required = "required" value="<?php if(isset($_COOKIE['time'])){echo $_COOKIE['time'];} else {echo "";} ?>"/>
+								<input name="time" type="text" title="Veuillez entrer une heure au format 'hh:mm' comprise entre 11:00 et 14:00" pattern="((1[1-3])([:][0-5][0-9]))|(14:00)" required = "required" placeholder="hh:mm" value="<?php if(isset($_COOKIE['time'])){echo $_COOKIE['time'];} else {echo "";} ?>"/>
 							</td>
 						</tr>
 						<tr>
