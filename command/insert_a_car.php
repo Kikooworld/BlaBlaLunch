@@ -7,6 +7,7 @@
 		//Connect to database
 		$db = ConnectToDataBase();
 		
+        mysqli_query($db, "LOCK TABLES cars WRITE;");
         
         //Check if car already exists
         $req_pre = mysqli_prepare($db, "SELECT cars.id FROM cars WHERE cars.owner = ?;") or die(mysqli_error($db));
