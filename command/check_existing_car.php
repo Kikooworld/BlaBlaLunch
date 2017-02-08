@@ -22,7 +22,8 @@
 	$db = ConnectToDataBase();
 	
 	//Check if car already exists
-	$req_pre = mysqli_prepare($db, "SELECT cars.id FROM cars WHERE cars.owner = \"".$name."\";") or die(mysqli_error($db));
+	$req_pre = mysqli_prepare($db, "SELECT cars.id FROM cars WHERE cars.owner = ?;") or die(mysqli_error($db));
+    mysqli_stmt_bind_param($req_pre, "s", $name);
 	mysqli_stmt_execute($req_pre);
 	mysqli_stmt_bind_result($req_pre, $existingId);
 	mysqli_stmt_fetch($req_pre);

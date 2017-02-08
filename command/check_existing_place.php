@@ -8,7 +8,8 @@
 	$db = ConnectToDataBase();
 	
 	//Check if restaurant already exists
-	$req_pre = mysqli_prepare($db, "SELECT restaurants.id FROM restaurants WHERE restaurants.name = \"".$name."\";") or die(mysqli_error($db));
+	$req_pre = mysqli_prepare($db, "SELECT restaurants.id FROM restaurants WHERE restaurants.name = ?;") or die(mysqli_error($db));
+    mysqli_stmt_bind_param($req_pre, "s", $name);
 	mysqli_stmt_execute($req_pre);
 	mysqli_stmt_bind_result($req_pre, $existingId);
 	mysqli_stmt_fetch($req_pre);

@@ -49,7 +49,7 @@
 				</section>
 			</div>
 		<!-- Pied de page -->
-		<marquee behavior="alternate" >
+		<marquee behavior="scroll">
 			<img src="./img/ribbon/banh bao.jpg" width="70" height="60" >
 			<img src="./img/ribbon/bo bun.jpg" width="70" height="60" >
 			<img src="./img/ribbon/burger.jpg" width="70" height="60" >

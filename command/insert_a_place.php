@@ -8,7 +8,8 @@
 		$db = ConnectToDataBase();
 		
 		//preparer la requete
-		$req_pre = mysqli_prepare($db, "INSERT INTO `restaurants` (`name`) VALUES (\"" . $name . "\");") or die(mysqli_error($db));
+		$req_pre = mysqli_prepare($db, "INSERT INTO `restaurants` (`name`) VALUES (?);") or die(mysqli_error($db));
+        mysqli_stmt_bind_param($req_pre, "s", $name);
 		
 		//executer la requete
 		mysqli_stmt_execute($req_pre);
