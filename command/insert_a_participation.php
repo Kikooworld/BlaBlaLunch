@@ -7,7 +7,6 @@
 		$db = ConnectToDataBase();
         
         //Lock table
-        // mysqli_query("
         mysqli_query($db, "LOCK TABLES participations WRITE, participants WRITE, cars WRITE;");
 		
         //Check if a seat is still available

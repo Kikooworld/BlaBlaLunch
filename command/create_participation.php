@@ -1,7 +1,6 @@
 <?php
 	header('content-type: text/html; charset=utf-8');
 	include("select_participant_id.php");
-	include("insert_a_participant.php");
 	include("insert_a_participation.php");
 	include("database_connection.php");
     
@@ -12,11 +11,6 @@
 	
 	//Get participant id
 	$participantId = SelectParticipantId($name);
-	if ($participantId == "")
-	{
-		InsertAParticipant($name);
-		$participantId = SelectParticipantId($name);
-	}
 	 
     InsertAParticipation($carId, $participantId);
 ?>
