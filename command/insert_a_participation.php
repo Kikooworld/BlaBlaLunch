@@ -67,17 +67,17 @@
                 //Disconnect from database
                 DisconnectFromDatabase($db);
                 
-                echo '<script>
-                var update = confirm("Un covoitureur avec le même nom a déjà réservé un covoiturage. Voulez-vous mettre à jour les données ?");
+                echo "<script>
+                var update = confirm(\"Un covoitureur avec le même nom a déjà réservé un covoiturage. Voulez-vous mettre à jour les données ?\");
                 if (update)
                 {
-                    location.href = "update_participation.php?participation=$participationId&participant=$participant_id&car=$car_id";
+                    location.href = \"update_participation.php?participation=$participationId&participant=$participant_id&car=$car_id\";
                 }
                 else
                 {
-                    window.location="../index.php";
+                    window.location=\"../index.php\";
                 }
-                </script>';
+                </script>";
             }
 		}
         else

@@ -11,6 +11,8 @@
 	//Connect to database
 	$db = ConnectToDataBase();
 	
+    mysqli_query($db, "LOCK TABLES cars WRITE, participations WRITE;");
+		
 	//Update cars table
 	$req_pre = mysqli_prepare($db, "UPDATE cars SET restaurant_id = \"".$restaurant_id."\", seats = \"".$seats."\", take_away = \"".$take_away."\", time = \"".$time."\" WHERE id = \"".$id."\";") or die(mysqli_error($db));
 	mysqli_stmt_execute($req_pre);
@@ -20,7 +22,10 @@
 	$req_pre = mysqli_prepare($db, "DELETE FROM participations WHERE car_id = \"".$id."\";") or die(mysqli_error($db));
 	mysqli_stmt_execute($req_pre);
 	mysqli_stmt_close($req_pre);
-	
+
+    //Unlock table
+    mysqli_query($db, "UNLOCK TABLES;");
+    
 	//Disconnect from database
 	DisconnectFromDatabase($db);
 	
